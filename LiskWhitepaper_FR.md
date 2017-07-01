@@ -154,15 +154,15 @@ La taxe de réseau pour ajouter un nouvel utilisateur ou accepter une requête e
 
 ### 3. Multi-signatures
 
-Lisk allows users to create a multi-signature group. A multi-signature group consists of several Lisk users, called group members. Transactions from multi-signature groups can be configured to require some or all signatories for approval.  
+Lisk permet aux utilisateurs de créer des groupes de multi-signatures. Un groupe de multi-signatures consistes en un groupe d'utilisateurs, appellés les membres du groupe. Les transactions avec un groupe de multi-signatures peut être configuré pour nécessiter l'approbation des tous les membres pour effectuer une transaction.
 
-To achieve this a M of N multi-signature architecture is implemented. All members of a multi-signature group (N) are added, up to a maximum of 16 signatories, and then the required number (M) of signatures needed to approve a transaction is specified.  
+Pour effectuer cela, une achitecture M à N multi-signatures a été implémentée. Tous les membres du groupe de multi-signatures (N) sont ajoutés, limité à un maximum de 16 signataires, et le nombre requis (M) de signatures pour approuver une transaction est paramétré.
 
-M must be greater than 1 and less than or equal than N. N is the number of members of the multi-signature group.  
+M doit être supérieur à 1 et inférieur ou égal à N. N étant le nombre de membres du groupe de multi-signatures.
 
-Once you initiate a transaction from the multi-signature group, all members will see this pending transaction and decide whether to approve or ignore it. Once the required number of confirmations has been collected, the group will allow the transaction and submit it to the blockchain.  
+Lorque une transaction d'un groupe de multi-signatures est initialisée, tous les membres verront un transaction en attente et seront aptes à l'approuver ou l'ignorer. Une fois le nombre de confirmation atteint, le groupe permet la transaction et peut être validée pour envoi à la blockchain.
 
-The owners of a multi-signature group may change the rules of the group at any time with the approval of at least M of the signatories.  
+Le propriétaire du groupe de multi-signatures peut changer les règles du groupe lorsqu'il le souhaite à condition d'avoir l'approbation de M signataires. 
 
 ## 5. Decentralized Applications  
 
