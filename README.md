@@ -2,5 +2,5 @@
 
 ## Languages
 
-- [English](/documentation?i=lisk-whitepaper/LiskWhitepaper)
+- [English](/LiskWhitepaper.md)
 - [French](/LiskWhitepaper_FR.md)
