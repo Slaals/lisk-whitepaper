@@ -1,7 +1,7 @@
 ## Sommaire
 
 1. [Introduction](#1-introduction)
-	1. [Qu'est ce que Lisk ?](#1-qu'est-ce-que-lisk-?)
+	1. [Principe de Lisk](#1-principe-de-lisk)
 	2. [Aspects techniques](#2-technical-background)
 	3. [Les innovations clés](#3-key-innovation-factors)
 	4. [Les composants de Lisk](#4-lisk-components)
@@ -32,7 +32,7 @@
 
 ## 1. Introduction
 
-### 1. Qu'est ce que Lisk ?
+### 1. Pincipe de Lisk
 
 Lisk est une plateforme nouvelle génération permettant de développer et distribuer des applications JavaScript décentralisées à l'aide d'un écosystème complet et facile à prendre en main. Avec Lisk, les développeurs peuvent publier, distribuer et monétiser leurs applications avec une cryptomonnaie adaptée qui utilise un système de blockchain modifié, des contrats intelligents (smart contracts), des sauvegardes en nuage (cloud storage) et des noeuds de calcul (computing nodes); le tout dans une seule solution.
 
