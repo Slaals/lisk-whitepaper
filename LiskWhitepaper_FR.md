@@ -17,15 +17,15 @@
 	1. [Les noms d'utilisateur](#1-usernames)
 	2. [Contactes](#2-contacts)
 	3. [Multi-signatures](#3-multi-signatures)
-5. [Decentralized Applications](#5-decentralized-applications)
-	1. [Virtual Machine](#1-virtual-machine)
+5. [Applications décentralisées](#5-decentralized-applications)
+	1. [Machine Virtuelle](#1-virtual-machine)
 	2. [Dapps](#2-dapps)
-	3. [Dapps Development](#3-dapps-development)
-	4. [Dapps Computation](#4-dapps-computation)
-	5. [Dapps Consensus](#5-dapps-consensus)
-	6. [Dapps Master Nodes](#6-dapps-master-nodes)
-	7. [Dapps Storage](#7-dapps-storage)
-	8. [Dapps Deposits / Withdrawals](#8-dapps-deposits-withdrawals)
+	3. [Développement de Dapps](#3-dapps-development)
+	4. [Exécution d'une Dapp](#4-dapps-computation)
+	5. [Consensus des Dapps](#5-dapps-consensus)
+	6. [Les noeuds maîtres](#6-dapps-master-nodes)
+	7. [L'enregistrement de Dapps](#7-dapps-storage)
+	8. [Le crédit et le débit avec une Dapp](#8-dapps-deposits-withdrawals)
 	9. [Dapps Tokens](#9-dapps-tokens)
 6. [Appendix](#6-appendix)
 7. [Sources](#7-sources)
@@ -164,72 +164,70 @@ Lorque une transaction d'un groupe de multi-signatures est initialisée, tous le
 
 Le propriétaire du groupe de multi-signatures peut changer les règles du groupe lorsqu'il le souhaite à condition d'avoir l'approbation de M signataires. 
 
-## 5. Decentralized Applications  
+## 5. Application Décentralisées  
 
-### 1. Virtual Machine  
+### 1. Machine virtuelle  
 
-Lisk Dapps are executed using Lisk Node, a specialized version of NodeJS that provides a sandboxed runtime environment in which to run individual dapps. Inter-process communication is achieved using Named Pipes, with no imposed limit on message size.  
+Les applications Lisk sont exécutées par les noeuds Lisk, une version NodeJS spécialisée offre un environnement bac-à-sable dans lequel on peut exécuter des Dapps. Les communications internes sont effectuées avec Names Pipes qui n'impose pas de limite en taille de message.
 
-Upon launching a new Dapp, the Lisk client starts a new instance of Lisk Node as a child process. If a Dapp encounters a fatal error, then the child process is killed gracefully, leaving the parent Lisk client unaffected.  
+Dès le lancement d'une nouvelle Dapp, le client Lisk démarre une nouvelle instance de noeud Lisk comme processus enfant. Lorsqu'une Dapp rencontre une erreur fatale, le processus enfant est arrêté dans le but de ne pas impacter le client Lisk parent.
 
-**Please note, currently there is no protection against unauthorized system calls made from the running dapp. Therefore, running untrusted code is not yet advisable, and could potentially lead to loss of funds. Work is underway to provide a fully sandboxed environment in which to run untrusted code.**  
+**Il est à noter qu'actuellement il n'y a pas de protection contre les appels non-autorisés d'une Dapp en court de lancement. C'est pourquoi il n'est pas conseillé de lancer des programmes non-sécurisés au risque de perdre des fonds. Nous travaillons au développement d'un environnement bac-à-sable pour les programmes non-sécurisés.** 
 
 ### 2. Dapps
 
-A dapp is a decentralized application[[8]](https://github.com/DavidJohnstonCEO/DecentralizedApplications/blob/master/README.md) written in Node.js and JavaScript. It works with the Lisk VM using either the Lisk or soon the Bitcoin consensus algorithm. The Lisk VM is a scalable Node.js application that allows Node.js and JavaScript developers to write dapps. With current web technologies (HTML5/CSS3/JavaScript) the developer is able to create a powerful UI. Dapps can use custom Node.js packages from NPM (the Node.js package manager).  
+Une Dapp est une application décentralisée[[8]](https://github.com/DavidJohnstonCEO/DecentralizedApplications/blob/master/README.md) écrite en Node.js et JavaScript. Une Dapp fonctionne avec la machine virtuelle (VM) Lisk qui utilisé l'algorithme de consensus de Lisk ou bientôt celui de Bitcoin. La VM de Lisk une application Node.js scalable qui permet aux développeurs compétents en JavaScript de produire des Dapps. Avec les technologies du web actuelles (HTML5/CSS3/JavaScript) les développeurs peuvent créer des interfaces utilisateur performantes. Dapp utilise des paquets modifiés de Node.js avec NPM (Node.js Package Manager, gestionnaire de paquets de Node.js).
 
-Regular users can launch the dapps on a Linux Lisk client or via the Lisk Lite client on Windows or Mac OS.  
+### 3. Développement de Dapps
 
-### 3. Dapps Development
+Les développeurs écrivent des Dapps en JavaScript qui permet de profiter entièrement de l'écosystème de Node.js et de son gestionnaire de paquets NPM. La VM de Lisk est intégrée avec l'API de Lisk. Cette API est une interface de la blockchain de Lisk et également de la blockchain de Bitcoin. Chaque Dapps est exécuté dans une VM Lisk, ce qui supprimer toutes attaques possibles et isole le développement d'un Dapp pour la sécurité. L'API de Lisk est accéssible par la Dapp.
 
-Developers write dapps in JavaScript which allows the use of the full ecosystem of Node.js packages powered by NPM. The Lisk VM is integrated with the Lisk API. This API interfaces with the Lisk Blockchain and even with the Bitcoin blockchain. Each dapp runs in the Lisk VM, which removes many possible attack vectors and thus makes it much safer for the end user to start dapps on their local machine. The Lisk API is accessible by the dapp.  
+Pour rendre le développement de Dapp facile, l'équipe de Lisk a publié lisk-cli, une interface en ligne de commande qui créé son propre testnet et un environnement Dapp. Également nous préparons une boîte à outils Dapp, qui offre aux développeurs une référence pour l'implémentation des fonctionnalités importantes de Dapp, et qui sert de base solide pour commencer à produire une Dapp.
 
-To make the dapp development as easy as possible the Lisk Team released lisk-cli, a command line interface which creates your own testnet and dapp environment by answering a few simple questions. Additionally we prepared a Dapp Toolkit, which gives developers a reference implementation of the most important dapp functionalities, and serves as a solid foundation upon which they can start building their decentralized applications.  
+Plusieurs librairies ont été écrites pour offrir toutes les fonctionnalités de l'API de Lisk.
 
-Many libraries have been written to provide the full Lisk API functionality for developers “straight out of the box”.  
+L'API inclut :  
 
-This API includes:  
+* L'algorithme de consensus  
+* L'API de Lisk  
+* L'API de Bitcoin  
+* L'API de la base de données  
 
-* Consensus API  
-* Lisk API  
-* Bitcoin API  
-* Database API  
+Pour ouvrir une Dapp, le format : `http://ip:port/dapps/<dapp_id/username>` est utilisé.
 
-To open a dapp, the format:  `http://ip:port/dapps/<dapp_id/username>` is used.  
+### 4. Exécution d'une Dapp
 
-### 4. Dapps Computation
+L'équipe de Lisk est en train de développer un système qui permet de facturer de temps de calcul. La VM de Lisk analyse le temps de calcul nécessaire à un processeur pour lancer une Dapp. Cela a pour effet de permettre aux propriétaires de noeuds de lancer une Dapp maîtresse pour recevoir des LISK ou des Bitcoins en retour.
 
-The Lisk Team is developing a system that allows for billing of CPU time. Where the Lisk VM uses its API to track how much CPU time is used to run a dapp. As a result, owners of nodes can run dapp master nodes in return for LISK or BTC payments.  
+L'objectif de Lisk est de créer une écosystème unique, où le calcul n'est qu'une partie. À l'avenir, Lisk fournira un mécanisme de publication de Dapps pour des noeuds candidats, capables alors d'exécuter des Dapps, selon les ressources nécessaire pour une Dapp afin d'obtenir un meilleur rendement (prix/performance). Le propriétaire du noeud recevra un revenu pour son service de calcul, de mémoire et d'autres ressources.
 
-The purpose of Lisk is to create a unique ecosystem, of which computation is one part. In the future, Lisk will have a submission manager to submit dapps to candidate nodes offering their service to run dapps and select the nodes meeting the specified resource requirements offering the best combination of price and performance. The node owners will earn revenue from providing computation, memory, storage and other resources.  
+Cela est appelé Dapps Billing. On peut comparer cela à la plateforme Heroku qui déploie des applications.
 
-This is referred to as Dapps Billing. You can compare it to the Heroku platform for deploying applications.  
+### 5. Consensus des Dapps
 
-### 5. Dapps Consensus
+Chaque Dapp possède son propre sidechain qui opère en parallèle avec les bloques de Lisk.
 
-Each Dapp has its own unique private side chain which operates in synchronization with the Lisk block time and current block height.  
+Les sidechains de Dapp sont gérées par le groupe des top 101 noeuds maîtres, chacun peut générer des bloques pour une Dapp. Le rôle premier de chaque noeud maître est de contrôller les transactions et valider chaque bloque générés dans une sidechain.
 
-Dapp sidechains are managed by a group of up to 101 master nodes, each of which have block generation enabled specifically for an individual dapp. The primary role of each master node is to process transactions and signify the validity of each block generated on the sidechain.  
+La signature des bloques par un noeud maître peut être restreint par le propriétaire de la Dapp. Il est capable alors de sélectionner les noeuds maîtres qui pourront forger des bloques dans la sidechain de la Dapp.
 
-The signing of blocks by a master node against a given dapp is restricted by the dapp owners. Whom then approve individual Lisk accounts as master nodes, which then are allowed to forge on the Dapp’s side chain.  
+Le consensus sidechain est maintenu dans le top 101 des noeuds maîtres avec la méthode DPoS utilisée pour sécuriser la blockchain de Lisk. C'est ce qui permet à chaque noeud maître de récupérer une partie des taxes par la sécurisation d'une sidechain.
 
-Sidechain consensus is maintained among the 101 master nodes using the same Delegated Proof-of-Stake (DPOS) method used to secure the Lisk blockchain. This allows individual master nodes to collect fees from each transaction as reward for securing the dapp's side chain.  
+L'objectif de ce mécanisme de consensus est de prévenir des dépassement de taille des bloques au sein de la blockchain et de conserver les sidechain autonomes, tandis que l'intégrité de chaque sidechain est assurée.
 
-The motivations behind this form of consensus are to prevent unnecessary enlargement of the Lisk blockchain and to retain individual sidechain autonomy, while at the same time, ensuring the integrity of each side chain is constantly upheld.  
+Il est à noter qu'une alternative future est prévue, les Dapps de Lisk pourront plutôt être sécurisées par la blockchain de Bitcoin avec la même méthode DPoS. 
 
-It should be noted as an optional alternative in the soon future, Lisk dapps can instead be secured by the Bitcoin blockchain using this same method.  
+### 6. Les noeuds maîtres
 
-### 6. Dapps Master Nodes
+Les noeuds maîtres d'une Dapp sont des noeuds de Lisk avec la Dapp installée et qui génèrent des bloques spécifiquement pour la Dapp. Les propriétaires de Dapps doivent approuver chaque compte pour qu'ils soient des noeuds maîtres. Ces noeuds peuvent ensuite contrôller les transactions et générer de nouveaux bloques conformes à la blockchain de Lisk, ces noeuds sont les fondations d'une Dapp. 
 
-Dapp master nodes are Lisk nodes with an installed dapp and with block generation enabled specifically for that dapp. Dapp owners need to approve individual Lisk accounts to be permitted to be a master node. The nodes process transactions and generate new blocks which are then secured by the Lisk Blockchain, making them the core of the dapp system.  
+### 7. L'enregistrement de Dapps
 
-### 7. Dapps Storage
+Il est possible d'enregistrer des Dapps dans n'importe quel réseau, centralisé ou décentralisé. Cependant, le réseau doit fournir un lien de téléchargement vers une archive ZIP. C'est nécessaire car un utilisateur qui veut utiliser la Dapp doit être capable de la télécharger en premier lieu.
 
-It is possible to host dapps on every kind of storage network, centralized and decentralized. However, the used storage network has to provide you with a download link to a ZIP package. This is necessary because you have to provide the download link at the dapp registration process so that once a consumer/user wants to install your dapp Lisk knows from where to download and unpack it.   
+Lorsque Lisk aura évolué IPFS[[10]](https://ipfs.io) sera nativement intégré à Lisk comme un système d'enregistrement décentralisé. 
 
-At a later stage IPFS[[10]](https://ipfs.io) will be natively integrated into Lisk as a decentralized storage option.   
-
-### 8. Dapps Deposits / Withdrawals
+### 8. Le crédit et le débit avec une Dapp
 
 Developers can use either LISK or BTC in their dapps11. Users of a dapp may deposit or withdraw funds from any given dapp. When LISK or BTC are sent to a dapp address, the funds appear in the dapp account. The funds will then become available for use within the dapp. This works the same way for BTC deposits as it does with LISK. BTC is sent to a special dapp address and then appears in the dapp Bitcoin wallet.  
 
