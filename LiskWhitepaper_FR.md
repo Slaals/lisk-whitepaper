@@ -2,37 +2,37 @@
 
 1. [Introduction](#1-introduction)
 	1. [Principe de Lisk](#1-principe-de-lisk)
-	2. [Aspects techniques](#2-technical-background)
-	3. [Les innovations clés](#3-key-innovation-factors)
-	4. [Les composants de Lisk](#4-lisk-components)
+	2. [Aspects techniques](#2-aspects-techniques)
+	3. [Les innovations clés](#3-les-innovations-clés)
+	4. [Les composants de Lisk](#4-les-composants-de-lisk)
 2. [Clients](#2-clients)
-	1. [Lisk (client lourd)](#1-lisk)
-	2. [Lisk Lite (client léger)](#2-lisk-lite)
+	1. [Lisk](#1-lisk)
+	2. [Lisk Lite](#2-lisk-lite)
 	3. [Lisk Mobile](#3-lisk-mobile)
 3. [Consensus](#3-consensus)
-	1. [Délégués](#1-delegates)
-	2. [Taxes de réseau](#2-network-fees)
+	1. [Délégués](#1-délégués)
+	2. [Taxes de réseau](#2-taxes-de-réseau)
 	3. [Peer-to-Peer](#3-peer-to-peer)
-4. [Fonctionnalités centrales](#4-core-features)
-	1. [Le nom d'utilisateur](#1-usernames)
+4. [Fonctionnalités centrales](#4-fonctionnalités-centrales)
+	1. [Le nom d'utilisateur](#1-le-nom-d'utilisateur)
 	2. [Contacts](#2-contacts)
 	3. [Multi-signatures](#3-multi-signatures)
-5. [Application décentralisée](#5-decentralized-applications)
-	1. [Machine Virtuelle](#1-virtual-machine)
+5. [Application décentralisée](#5-application-décentralisée)
+	1. [Machine Virtuelle](#1-machine-virtuelle)
 	2. [Dapps](#2-dapps)
-	3. [Développement d'une Dapp](#3-dapps-development)
-	4. [Exécution d'une Dapp](#4-dapps-computation)
-	5. [Consensus des Dapps](#5-dapps-consensus)
-	6. [Les noeuds maîtres](#6-dapps-master-nodes)
-	7. [L'enregistrement d'une Dapp](#7-dapps-storage)
-	8. [Le crédit et le débit avec une Dapp](#8-dapps-deposits-withdrawals)
-	9. [La monnaie d'une Dapp](#9-dapps-tokens)
-6. [Appendice](#6-appendix)
+	3. [Développement d'une Dapp](#3-développement-d'une-dapp)
+	4. [Exécution d'une Dapp](#4-exécution-d'une-dapp)
+	5. [Consensus des Dapps](#5-consensus-des-dapps)
+	6. [Les noeuds maîtres](#6-les-noeuds-maîtres)
+	7. [L'enregistrement d'une Dapp](#7-l'enregistrement-d'une-dapp)
+	8. [Le crédit et le débit avec une Dapp](#8-le-crédit-et-le-débit-avec-une-dapp)
+	9. [La monnaie d'une Dapp](#9-la-monnaie-d'un-dapp)
+6. [Appendice](#6-appendice)
 7. [Sources](#7-sources)
 
 ## 1. Introduction
 
-### 1. Pincipe de Lisk
+### 1. Principe de Lisk
 
 Lisk est une plateforme nouvelle génération permettant de développer et distribuer des applications JavaScript décentralisées à l'aide d'un écosystème complet et facile à prendre en main. Avec Lisk, les développeurs peuvent publier, distribuer et monétiser leurs applications avec une cryptomonnaie adaptée qui utilise un système de blockchain modifié, des contrats intelligents (smart contracts), des sauvegardes en nuage (cloud storage) et des noeuds de calcul (computing nodes); le tout dans une seule solution.
 
@@ -59,13 +59,13 @@ Pour couronner le tout, toutes ces fonctions en nuage sont exécutées par des u
 
 ## 2. Clients
 
-### 1. Lisk (client lourd)
+### 1. Lisk
 
 Le client lourd est la meilleure solution pour les supers-utilisateurs, les délégués et les développeurs. Il est disponible pour Windows, Mac OS et Linux. Cependant être délégué n'est que possible sur Linux. Le client léger peut être connecté au client lourd pour accéder au réseau.
 
 Ils peuvent être utilisés pour réaliser des appels API, si c'est autorisé par le propriétaire du client lourd. Tous les clients lourds téléchargent la blockchain en P2P.
 
-### 2. Lisk Lite (client léger)
+### 2. Lisk Lite
 
 La plupart des utilisateurs utiliseront le client léger pour accéder à leur compte Lisk, c'est une version alléger du client Lisk.
 
