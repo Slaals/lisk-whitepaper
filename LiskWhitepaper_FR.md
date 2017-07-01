@@ -1,4 +1,4 @@
-## Table of Contents
+## Sommaire
 
 1. [Introduction](#1-introduction)
 	1. [Qu'est ce que Lisk ?](#1-what-is-lisk)
@@ -27,7 +27,7 @@
 	7. [L'enregistrement de Dapps](#7-dapps-storage)
 	8. [Le crédit et le débit avec une Dapp](#8-dapps-deposits-withdrawals)
 	9. [La monnaie d'une Dapp](#9-dapps-tokens)
-6. [Appendix](#6-appendix)
+6. [Appendice](#6-appendix)
 7. [Sources](#7-sources)
 
 ## 1. Introduction
@@ -256,12 +256,12 @@ Les développeurs devraient intégrer leur propre monnaie dans leur Dapp, et ell
 
 ## 7. Sources  
 
-* [1] [node.js Organization.](https://nodejs.org)  
+* [1] [Node.js](https://nodejs.org)  
 * [2] [nw.js](https://github.com/nwjs/nw.js)  
 * [3] [Electron](https://github.com/atom/electron)  
 * [4] [Bitshares DPoS.](http://wiki.bitshares.org/index.php/BitShares)  
-* [5] [Peer-to-Peer Wikipedia Article](https://en.wikipedia.org/wiki/Peer-to-peer)  
-* [6] [Seccomp Wikipedia Article](https://en.wikipedia.org/wiki/Seccomp)  
+* [5] [Article Wikipedia sur le P2P](https://fr.wikipedia.org/wiki/Peer-to-peer)  
+* [6] [Seccomp Wikipedia Article](https://fr.wikipedia.org/wiki/Seccomp)  
 * [7] [npm.js](http://npmjs.org)  
 * [8] [David Johnston. Decentralized Applications.](https://github.com/DavidJohnstonCEO/DecentralizedApplications/blob/master/README.md)  
 * [9] [Factom. Merkle tree.](https://github.com/FactomProject/FactomDocs/blob/master/Factom_Whitepaper.pdf)  
