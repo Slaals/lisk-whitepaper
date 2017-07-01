@@ -26,7 +26,7 @@
 	6. [Les noeuds maîtres](#6-dapps-master-nodes)
 	7. [L'enregistrement de Dapps](#7-dapps-storage)
 	8. [Le crédit et le débit avec une Dapp](#8-dapps-deposits-withdrawals)
-	9. [Dapps Tokens](#9-dapps-tokens)
+	9. [La monnaie d'une Dapp](#9-dapps-tokens)
 6. [Appendix](#6-appendix)
 7. [Sources](#7-sources)
 
@@ -229,26 +229,30 @@ Lorsque Lisk aura évolué IPFS[[10]](https://ipfs.io) sera nativement intégré
 
 ### 8. Le crédit et le débit avec une Dapp
 
-Developers can use either LISK or BTC in their dapps11. Users of a dapp may deposit or withdraw funds from any given dapp. When LISK or BTC are sent to a dapp address, the funds appear in the dapp account. The funds will then become available for use within the dapp. This works the same way for BTC deposits as it does with LISK. BTC is sent to a special dapp address and then appears in the dapp Bitcoin wallet.  
+Les développeurs peuvent utiliser soit LISK soit BTC avec leur Dapps. Les utilisateurs d'une Dapp peuvent créditer ou débiter des fonds depuis n'importe quelle Dapp. Lorsque des LISK ou des BTC sont envoyés à une adresse Dapp, les fonds apparaissent dans les comptes de la Dapp. Ces fonds sont ensuite disponibles dans la Dapp. Cela fonctionne de la même manière avec le débit. Les BTC sont envoyés à une adresse spéciale de la Dapp puis apparaissent dans le portefeuille Bitcoin de la Dapp.
 
-Dapp accounts are a special type of account created by the owner of a dapp. All deposited LISK or BTC will be stored in the associated addresses. For security reasons, only the use of multi-signature dapp accounts with trusted signers is recommended.  
+Un compte Dapp est un compte spécial créé par le propriétaire de la Dapp. Tous les crédits LISK ou BTC sont enregistrés sur l'adresse associée. Pour des raisons de sécurité, seulement la multi-signature est autorisée pour la gestion des comptes d'une Dapp.
 
-Withdrawals from dapps are processed by master nodes. When a withdrawal request is sent, the dapp master node processes it and moves the funds to the specified withdrawal address in the Lisk or Bitcoin blockchain.  
+Les débits depuis une Dapp sont contrôllés par les noeuds maîtres. Lorsque un débit est demandé, le noeud maître l'opère et déplace les fonds vers l'adresse spécifiée dans la blockchain Lisk ou la blockchain Bitcoin.
 
-### 9. Dapps Tokens
+### 9. La monnaie d'une Dapp
 
-Developers may implement custom tokens in their dapps, and use these tokens as the main currencies within their dapps. These tokens may be used in the same way as LISK or BTC, but the tokens cannot be moved directly from one dapp sidechain to another dapp sidechain. They must only move via the Lisk main chain.  
+Les développeurs devraient intégrer leur propre monnaie dans leur Dapp, et elle sera utilisée comme monnaie d'échange au sein de la Dapp. Ces monnaies peuvent être utilisées de la même façon que LISK ou BTC, mais ces monnaies ne peuvent être directement déplacées d'une sidechain à une autre. Elles ne peuvent que circuler sur la blockchain de Lisk.
 
-## 6. Appendix
+## 6. Appendice
 
-### Written by
+### Écrit par
 
 * Max Kordek  
 * Oliver Beddows  
 
-### Releases
+### Traduit de l'anglais au français par
 
-* February 1st, 2016 (v1.0)  
+* Jonathan Serra
+
+### Date de lancement
+
+* 1er février 2016 (v1.0)  
 
 ## 7. Sources  
 
@@ -263,5 +267,3 @@ Developers may implement custom tokens in their dapps, and use these tokens as t
 * [9] [Factom. Merkle tree.](https://github.com/FactomProject/FactomDocs/blob/master/Factom_Whitepaper.pdf)  
 * [10] [IPFS. A decentralized storage solution.](https://ipfs.io)  
 * [11] [Sidechains. Deposit/withdrawal sidechain.](https://www.blockstream.com/sidechains.pdf)  
-
-[**Based on the Crypti Whitepaper v2.1 by The Crypti Foundation**](https://crypti.me/crypti.pdf)
