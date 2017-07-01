@@ -1,7 +1,7 @@
 ## Sommaire
 
 1. [Introduction](#1-introduction)
-	1. [Qu'est ce que Lisk ?](#1-what-is-lisk)
+	1. [Qu'est ce que Lisk ?](#1-qu'est-ce-que-lisk-?)
 	2. [Aspects techniques](#2-technical-background)
 	3. [Les innovations clés](#3-key-innovation-factors)
 	4. [Les composants de Lisk](#4-lisk-components)
