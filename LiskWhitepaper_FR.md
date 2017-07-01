@@ -10,12 +10,12 @@
 	2. [Lisk Lite (client léger)](#2-lisk-lite)
 	3. [Lisk Mobile](#3-lisk-mobile)
 3. [Consensus](#3-consensus)
-	1. [Delegates](#1-delegates)
-	2. [Network fees](#2-network-fees)
+	1. [Délégués](#1-delegates)
+	2. [Taxes de réseau](#2-network-fees)
 	3. [Peer-to-Peer](#3-peer-to-peer)
-4. [Core Features](#4-core-features)
-	1. [Usernames](#1-usernames)
-	2. [Contacts](#2-contacts)
+4. [Fonctionnalités centrales](#4-core-features)
+	1. [Les noms d'utilisateur](#1-usernames)
+	2. [Contactes](#2-contacts)
 	3. [Multi-signatures](#3-multi-signatures)
 5. [Decentralized Applications](#5-decentralized-applications)
 	1. [Virtual Machine](#1-virtual-machine)
@@ -81,76 +81,76 @@ C'est ce qui permet de facilement créer des Dapps JavaScript avec nw.js[[2]](ht
 
 ### 3. Lisk Mobile
 
-The mobile client allows the user to access their Lisk account while on the go. It will be available for both iOS and Android and featured in the Apple and Google Play app stores.  
+Le client mobile de Lisk permet aux utilisateurs d'accéder à leur compte depuis n'importe où. Le client sera disponnible sur iOS et Android, publié sur Apple Store et Google Play.
 
-The backend infrastructure for the mobile client will mirror that of our desktop solution. The real change comes in the form of additions and tweaks to the user interface which will allow for a tailored experience on mobile devices. The app has been custom designed to provide a familiar and easy to use mobile interface, much like the Bitcoin or Banking apps you already use on a daily basis. It will also allow you to launch all of your favorite dapps from within the app itself. In the future, we plan to integrate device specific functionalities like the ability to utilize the fingerprint or retinal scan capabilities for added security on your account.  
+L'infrastructure serveur pour le client mobile sera une copie de celui utilisé pour le client lourd. Le vrai changement réside dans l'apparence du client afin d'améliorer l'expérience utilisateur sur petit écran. L'application a été adapté à une interface mobile, comme Bitcoin ou les applications de banque qu'on utilise déjà. Cela permettra de lancer toutes les Dapps depuis le client mobile. Nous projettons de développer des fonctionnalités propres au mobile tel que l'empreinte digitale ou l'empreinte rétinienne pour accroître la sécurité.
 
 ## 3. Consensus
 
-Lisk is based on the DPoS[[4]](http://wiki.bitshares.org/index.php/BitShares) (Delegated Proof of Stake) consensus mechanism. This method of consensus was originally created by the BitShares team.  
+Lisk est basé sur le DPoS[[4]](http://wiki.bitshares.org/index.php/BitShares) (Delegated Proof of Stake) mécanisme de consensus. Cette méthode de consensus a été créée par l'équipe BitShares.
 
-DPoS is based on delegates creating blocks. Delegates are trusted accounts which are elected to be “Active Delegates”. The 101 delegate accounts with the most votes create the blocks. Other delegates are listed as “Standby Delegates”, and can advance to the top 101 list by receiving votes from the other Lisk owners. All users of Lisk have 101 votes available to elect their favorite delegates into the top 101 list. The weight of each of the 101 votes is proportional to the amount of LISK the user has in the wallet the votes are cast from. This total amount is shown on the delegate list as an “Approval”, and is listed as a percentage of the 100 million LISK available that is voted for that delegate.  
+DPoS est basé sur des délégués pouvant créer des bloques. Les délégués sont des comptes de confiance qui sont élus comme "Délégués Actifs". Les 101 délégués avec le plus de votes peuvent créer des bloques. Les autres délégués, n'étant pas dans le top 101, sont des "Délégués en Attente", ils peuvent atteindre le top 101 de la liste des délégués en recevant des votes par les détenteurs de LSK. Tous les utilisateurs de Lisk ont 101 votes disponnibles pour déléguer leurs candidats favoris. Le poids de vote est proportionnel au montant que possède le votant dans son portefeuille Lisk. Le montant total est affiché dans la liste des délégués avec le status "Approuvé", et est listé en pourcentage selon un ratio du total de montant voté pour le délégué et les 100 millions de Lisk disponnibles.
 
-Delegate promotion to the top 101 or demotion to the standby list happens at the completion of the 101 block generation cycle. Each cycle of 101 blocks is created by the top 101 delegates in random order. The block time is 10 seconds. Newly created blocks are broadcast to the network and added to the blockchain. After 6 to 10 confirmations, a block, along with its transactions, can be considered as confirmed. A complete 101 block generation cycle takes approximately 16 minutes.  
+La promotion des délégués au top 101 ou la déstitution des délégués intervient lors de la réalisation d'un cycle de 101 bloques. Chaque cycle de 101 bloques est créé dans un ordre aléatoire par les délégués du top 101. Le temps d'un bloque est de 10 secondes. Les bloques fraîchement créés sont diffusés dans le réseau et ajoutés à la blockchain. Après 6 à 10 confirmations, un bloque, avec également ses transactions, peut être considéré comme "confirmé". Un cycle de 101 bloques prend approximativement 16 minutes.
 
-In DPoS, forks can occur, but the longest fork wins. Delegates must be online all of the time and have sufficient uptime. Uptime is used to catalogue the reliability of a node by logging each time that it misses a block that was assigned to it. Users vote for the top 101 delegates based on several factors, uptime being one key factor used to make a determination. If a delegate drops below a certain rating, users may remove votes from the delegate in question due to poor performance.  
+Avec DPoS, des mises à jour lourdes peuvent exister, mais la mise à jour la plus longue est prioritaire. Les délégués doivent être en ligne en même temps et avoir un temps d'activité suffisament long. Le temps d'activité est utilisé pour définir le niveau de confiance d'un noeud en journalisant chaque instant où ce noeud "rate" un bloque pour lequel il était assigné. Les utilisateurs votent pour le top 101 selon plusieurs facteurs, le temps d'activité étant un facteur clé pour déterminer le vote. Si un délégué diminue son activité, les utilisateurs peuvent supprimer leur vote pour cause de mauvaise performance. 
 
-### 1. Delegates
+### 1. Délégués
 
-The function of delegates is covered above in the Consensus section.  
+La fonction des délégués est expliquée dans la section sur le consensus.
 
-To be a delegate, a user needs to register a delegate account. This is accomplished from the client user interface in either the full or lite wallet. Keep in mind that block generation is only possible in the full wallet. This means that you can register a delegate in either version of the wallet but will only be able to perform the delegate functions from a full version of the client. The account number and username will be the same after the delegate registration. All Lisk accounts are eligible to become delegates.  
+Pour être délégué, un utilisateur doit enregistrer un compte de délégué. Cela peut être fait depuis le client lourd ou le client léger. Il faut garder à l'esprit la généreration de bloques n'est possible qu'avec un portefeuille complet. Cela signifie qu'il est possible d'enregistrer un délégué avec n'importe quelle version de portefeuille mais qu'il ne pourra entrer en activité qu'avec un client complet. Le numéro de compte et le nom d'utilisateur sera le même après l'enregistrement comme délégué. Tous les comptes Lisk sont peuvent s'inscrire comme délégués.
 
-New delegates start as standby delegates. Standby delegates begin with an approval rating of 0% and will need to accrue votes from the Lisk community in order to advance to be one of the top 101 delegates. Block generation is performed by the top 101 delegates only. If you are in standby status, you will not forge any blocks.  
+Les nouveaux délégués commencent comme délégués en attente. Les délégués en attante débutent avec un approbation équivalente à 0% et auront besoin de votes de la communauté Lisk afin de monter dans la liste de top 101 des délégués. La génération de bloques est seulement réalisée par les délégués du top 101. Un délégué en attente ne pourra forger de bloques.
 
-### 2. Network fees
+### 2. Taxes de réseau
 
-All valid transactions in the network must be processed. Delegates process transactions and store them in new blocks. For this work, the delegates receive a fee. All transactions in the network must contain some type of fee as a spam countermeasure.  
+Toutes les transaction valides au sein du réseau doivent être opérées. Les délégués opèrent les transactions et les enregistre dans de nouveaux bloques. Pour que tout fonctionne, les délégués recoivent une taxe. Toutes les transactions du réseau doivent contenir un montant de taxe pour éviter les spammes.
 
-The default network fee for sending an LISK transaction is 0.1 LISK. For example, a 100 LISK transaction includes an additional fee of 0.1 LISK for a total transaction cost of 100.1 LISK.  
+La taxe par défault dans le réseau est de 0,1 LISK. Par exemple, un transaction de 100 LISK inclut un taxe de 0,1 LISK pour une transaction équivalente à 100,1 LISK.
 
-The following is a list of fees for different types of transactions:  
+Ci-dessous une liste des différents types de transaction :
 
-- 0.1 LISK of amount sent for a spend transaction  
-- 5 LISK for registering a second passphrase  
-- 100 LISK for registering a username  
-- 100 LISK for registering as a delegate  
-- 1 LISK to add a contact  
-- 500 LISK to register a dapp  
-- 5 LISK per member for registering a multi-signature group.  
+- 0,1 LISK de taxe pour un envoi de transaction
+- 5 LISK pour enregister un second mot de passe
+- 100 LISK pour enregistrer un nom d'utilisateur
+- 100 LISK pour enregistrer un délégué
+- 1 LISK pour ajouter une contact
+- 500 LISK pour enregistrer une Dapp
+- 5 LISK par membre pour enregistrer une multi-signature par groupe.
 
-Delegates receive the fees from all transactions of the last block cycle (101 blocks). Fees are split equally between all delegates who created a block in that cycle. Delegates who missed creating a block assigned to them during that cycle are not paid.  
+Les délégués recoivent les taxes de toutes les transactions du dernier cycle de bloques (101 bloques). Les taxes sont partagées équitablement entre les délégués qui ont créé des bloques dans le cycle. Les délégués qui manquent de créer des bloques dans le cycle alors qu'ils leur étaient assignés ne seront pas payés.
 
 ### 3. Peer-to-Peer
 
-We are using a standard P2P network[[5]](https://en.wikipedia.org/wiki/Peer-to-peer), which works on top of the http protocol, and uses json formatted data as a method of data inter-change. The P2P module captures the following information about each peer:  
+Nous utilisons un réseau standard de P2P[[5]](https://en.wikipedia.org/wiki/Peer-to-peer) qui fonctionne avec le protocol HTTP et utilise le format JSON pour échanger les données. Le module P2P récupère les informations de chaque pair suivantes :
 
 - Version  
-- OS  
-- IP  
-- Port  
+- Système d'opération  
+- Adresse IP  
+- Numéro de Port  
 
-## 4. Core Features
+## 4. Fonctionnalités centrales
 
-### 1. Usernames
+### 1. Les noms d'utilisateur
 
-Lisk allows users to register usernames. Which act as an alias to your account. Other users can send transactions to this username and the linked account will then receive it. This eliminates the need to remember long account addresses.  
+Lisk permet aux utilisateurs d'enregistrer des noms d'utilisateur qui sert d'alias à un compte. Les autres utilisateurs peuvent envoyer des transactions vers le nom d'utilisateur et les comptes liés la recevront. Cette fonctionnalité permet de simplement retenir des comptes avec des adresses longues.
 
-The network fee for username registration is 100 LISK. Usernames may contain the following characters:  
+La taxe pour enregistrer un nom d'utilisateur est de 100 LISK. Les noms d'utilisateur peuvent contenir les caractères suivants :
 
-- Traditional Alphabet (Upper & Lower Case): A-Z, a-z  
-- Numbers: 0-9  
-- Special Characters: !, @, $, &, and .  
+- Alphabet traditionnel (minuscule et majuscule) : A-Z, a-z
+- Des nombres de 0 à 9 : 0-9
+- Des caractères spéciaux : !, @, $, &, et .
 
-Each username is unique. The length is currently limited to 16 characters. Currently, it is not possible to remove a username from your account.  
+Chaque nom d'utilisateur est unique. La taille est actuellement limités à 16 caractères. Ce n'est pour l'instant pas possible de supprimer un nom d'utilisateur.
 
-### 2. Contacts
+### 2. Contactes
 
-Lisk allows users to maintain a contact or friends list. This feature can be used to store frequently used accounts, but can also be used as a reputation system. If an account has many confirmed contacts, it may be considered more reputable than one without.  
+Lisk permet de gérer une liste de contactes ou d'amis. Cette fonctionnalité peut être utilisée pour enregistrer des comptes fréquemment utilisés, mais il peut aussi être utilisé comme système à réputation. Si un compte possède des contactes confirmés, il pourrait être considéré comme plus populaire que d'autres qui n'en ont pas.
 
-Contacts work like followers on Twitter. A user is added to the contact list, which will then show as a pending contact request in the user's wallet. Regardless of whether or not the other user accepts the request, they will be shown in the contact list. Once the other user accepts the request, the requester will be added to his contact list as well. Both parties now have a new confirmed contact.  
+Les contactes fonctionnent comme les "followers" dans Twitter. Un utilisateur est ajouté à la liste de contactes qui sera alors affiché comme contacte en attente dans le portefeuille de l'utilisateur. Le contacte ajouté sera affiché dans la liste des contactes, que l'utilisateur ajouté ait accepté ou non. Lorsque l'utilisateur ajouté accepte la demande de contacte, l'envoyeur de la requête sera alors ajouté dans sa liste de contactes. Les deux utilisateurs ont alors chacun un nouvel utilisateur confirmé. 
 
-The network fee for adding a new contact or accepting an incoming request is 1 LISK.  
+La taxe de réseau pour ajouter un nouvel utilisateur ou accepter une requête est de 1 LISK.
 
 ### 3. Multi-signatures
 
