@@ -6,8 +6,8 @@
 	3. [Les innovations clés](#3-key-innovation-factors)
 	4. [Les composants de Lisk](#4-lisk-components)
 2. [Clients](#2-clients)
-	1. [Lisk](#1-lisk)
-	2. [Lisk Lite](#2-lisk-lite)
+	1. [Lisk (client lourd)](#1-lisk)
+	2. [Lisk Lite (client léger)](#2-lisk-lite)
 	3. [Lisk Mobile](#3-lisk-mobile)
 3. [Consensus](#3-consensus)
 	1. [Delegates](#1-delegates)
@@ -59,31 +59,25 @@ Pour couronner le tout, toutes ces fonctions en cloud sont exécutées par des u
 
 ## 2. Clients
 
-### 1. Lisk
+### 1. Lisk (client lourd)
 
-The full client is the best solution for super users, delegates and developers. It is available for Windows, Mac OS and Linux. Though it is only possible to be a delegate with the Linux client. Lite client users can connect to the full clients to access the network.  
+Le client lourd est la meilleure solutions pour les supers-utilisateurs, les délégués et les développeurs. C'est disponnible pour Windows, Mac OS et Linux. Cependant être délégué n'est que possible sur Linux. Le client léger peut être connecté au client lourd pour accéder au réseau.
 
-They can also use them to make API calls, if it is allowed by the full client owner. All full client users download the blockchain from each other through a peer-to-peer connection.  
+Ils peuvent être utilisés pour réaliser des appels API, si c'est autorisé par le propriétaire du client lourd. Tous les clients lourds téléchargent la blockchain en P2P.
 
-Dapp users can use the lite client for accessing their installed dapps as well. The dapps API and the peers API are available to developers. They make it possible to quickly and easily create JavaScript dapps using nw.js2 or Electron3.
+### 2. Lisk Lite (client léger)
 
-### 2. Lisk Lite
+La plupart des utilisateurs utiliseront le client léger pour accéder à leur compte Lisk, c'est une version alléger du client Lisk.
 
-The regular user will mostly use the lite client, a light-weight Lisk client, to access their Lisk account.  
+Le client léger est disponnible sur Windows et Mac OS. Il ne nécessite pas d'installation puisqu'il est lancé directement sur le navigateur. Ce n'est pas un noeud de réseau, ce client est connecté à Internet et communique avec le protocole HTTP. Cela apporte quelques avantages.
 
-The lite client is available for Windows and Mac OS. It does not require an installation process, as it utilizes modern web technologies. It does not act as a network node, as it only connects to other peers which are online via an http connection. This brings several advantages.  
+L'utilisateur n'a pas besoin de télécharger la blockchain, ce qui veut dire que l'application est très légère. La clé secrète n'est pas envoyée à travers le réseau, toutes les données sont signées depuis la machine locale. Il est possible de réaliser tout type de transaction.
 
-The user does not have to download the blockchain anymore, which means the application itself stays very small. It does not broadcast secret keys through the network, all data is signed locally on your device. It is possible to make all types of transactions available.  
+Si on souhaite déléguer un noeud, il est possible de l'enregistrer avec le client léger. Cependant, il n'est pas possible d'exécuter un noeud depuis ce client, c'est à dire créer de nouveaux bloques. Pour cela il est nécessaire d'utiliser le client lourd.
 
-If you want to run a delegate node, you can register a delegate account with the lite client. However, it is not possible to run a delegate from it, i.e. creating new blocks. For this you need the full client.  
+Les utilisateurs de Dapp peuvent utiliser le client léger pour accéder à leurs Dapp applications. L'API Dapp et les APIs connexes sont accéssibles par les développeurs.
 
-Dapp users can use the lite client for accessing their installed dapps as well. The dapps API and the peers API are available to developers.  
-
-They make it possible to create quickly and easily Javascript dapps with nw.js[[2]](https://github.com/nwjs/nw.js) or Electron[[3]](https://github.com/atom/electron).  
-
-The full client is the best solution for super users, delegates and developers. It is available for Windows, Mac OS and Linux. Though it is only possible to be a delegate with the Linux client. Lite client users can connect to the full clients to access the network.  
-
-They can also use them to make API calls, if it is allowed by the full client owner. All full client users download the blockchain from each other through a peer-to-peer connection.  
+C'est ce qui permet de facilement créer des Dapps JavaScript avec nw.js[[2]](https://github.com/nwjs/nw.js) ou Electron[[3]](https://github.com/atom/electron).
 
 ### 3. Lisk Mobile
 
